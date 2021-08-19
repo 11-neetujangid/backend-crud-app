@@ -2,8 +2,10 @@ import express from 'express';
 
 import { getUsers, addUser, getUserById, editUsers, deleteUser, loginUser} from '../Controller/userController.js';
 import {addPost ,getPosts, getPostById, editPost} from '../Controller/postController.js';
-
 import {addComment, getComments} from '../Controller/commentController.js';
+import {addTask, getTasks} from '../Controller/taskController.js';
+
+
 const route = express.Router();
 
 // User--->
@@ -24,6 +26,11 @@ route.get('/comment', getComments);
 
 
 route.get('/addPost/:id',  getPostById);
-route.get('/:id', getUserById);
+// route.get('/:id', getUserById);
+
+
+
+route.post('/addtask',addTask);
+route.get('/task',getTasks)
 
 export default route;

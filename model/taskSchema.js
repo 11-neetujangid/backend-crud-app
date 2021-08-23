@@ -7,7 +7,7 @@ const taskSchema = mongoose.Schema({
     date: Date,
     startTime: String,
     endTime: String,
-    user:String
+    user:String,
 
 });
 

@@ -4,6 +4,9 @@ import { getUsers, addUser, getUserById, editUsers, deleteUser, loginUser} from 
 import {addPost ,getPosts, getPostById, editPost} from '../Controller/postController.js';
 import {addComment, getComments} from '../Controller/commentController.js';
 import {addTask, getTasks} from '../Controller/taskController.js';
+// import {addDate} from '../Controller/datesController.js';
+import {addDate }from '../Controller/datesController.js'
+
 
 
 const route = express.Router();
@@ -26,11 +29,15 @@ route.get('/comment', getComments);
 
 
 route.get('/addPost/:id',  getPostById);
-// route.get('/:id', getUserById);
+
 
 
 
 route.post('/addtask',addTask);
+route.get('/dates',addDate);
+
 route.get('/task',getTasks)
+route.get('/:id', getUserById);
+
 
 export default route;
